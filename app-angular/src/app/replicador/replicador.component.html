@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-center ">
+    <div class="w-50">
+
+        <div class="mb-3">
+            <label for="imputTexto">Escribe algo: </label>
+            <input type="text"  id="imputTexto" (input)="actualizarTexto($event)">
+        </div>
+        <div class="mb-3">
+            <label for="replicadorTexto">Texto Replicado: </label>
+            <input type="text" id="replicadorTexto" [value]="texto" readonly>
+        </div>
+        
+    </div>
+</div>
