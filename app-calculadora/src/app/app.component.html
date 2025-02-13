@@ -3,17 +3,7 @@
         
         <div class="w-50">
             <div class="text-center text-warning"> <h1>{{title}}</h1></div>
-            <div class="mb-3">
-                <label for="operandoA" class="mx-2">Oprerando 1: </label>
-                <input type="number" id="operandoA" [(ngModel)] ="operandoA" autocomplete="off" >
-            </div>
-            <div class="mb-3">
-                <label for="operandoB" class="mx-2"> Operando 2: </label>
-                <input type="number"  id="operandoB" [(ngModel)] = "operandoB" autocomplete="off">
-            </div>
-    
-    
-            <button type="button" class="btn btn-primary" (click)="sumar()">Sumar</button>
+           <app-formulario (resultadoSuma)="procesarResultado($event)"/>
             <div>
                la suma es:  {{resultado}}
             </div>
