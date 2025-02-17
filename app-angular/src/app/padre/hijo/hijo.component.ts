@@ -8,12 +8,20 @@ import { Component, EventEmitter, Input, input, Output } from '@angular/core';
   styleUrl: './hijo.component.css'
 })
 export class HijoComponent {
+  
+  mensaje: string = 'Mensaje desde el componente Hijo....'
 
-  @Output() notificarPadre = new EventEmitter<string>();
-
-  enviarMensaje(){
-    this.notificarPadre.emit("Mensaje desde el componente padre al hijo");
+  cambiarMensaje(nuevoMensaje:string){
+    this.mensaje = nuevoMensaje;
   }
+
+
+
+  // @Output() notificarPadre = new EventEmitter<string>();
+
+  // enviarMensaje(){
+  //   this.notificarPadre.emit("Mensaje desde el componente padre al hijo");
+  // }
 
 
   // @Input() mensaje!: string;
