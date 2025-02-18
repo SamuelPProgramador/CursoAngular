@@ -11,6 +11,7 @@ import { ComponenteIfComponent } from "./componente-if/componente-if.component";
 import { AgregarTareaComponent } from "./agregar-tarea/agregar-tarea.component";
 import { ComponenteForComponent } from "./componente-for/componente-for.component";
 import { ViewChildComponent } from "./view-child/view-child.component";
+import { MensajeService } from './mensaje.service';
 
 
 
@@ -22,5 +23,14 @@ import { ViewChildComponent } from "./view-child/view-child.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Descorador View Child en  Angular';
+  title = 'Servicios en  Angular';
+
+  mensaje:string;
+
+  constructor(mensajeService: MensajeService){
+    this.mensaje = mensajeService.obtenerMensaje();
+    
+
+  }
+
 }
